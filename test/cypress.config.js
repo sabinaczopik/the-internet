@@ -17,5 +17,7 @@ module.exports = defineConfig({
     },
     specPattern: 'cypress/e2e/**/*.feature',
     supportFile: false,
+    stepDefinitions: 'cypress/support/step_definitions/**/*.js',
+    baseUrl: 'https://the-internet.herokuapp.com'
   },
 });
