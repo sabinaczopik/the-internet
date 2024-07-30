@@ -1,22 +1,24 @@
 class AddRemoveElementsPage {
+    addElementsBtn = 'button[onclick="addElement()"]'
+    deleteBtn = 'button[onclick="deleteElement()"]'
   visit() {
 	cy.visit('/add_remove_elements/');
   }
 
   addElements(count) {
 	for (let i = 0; i < count; i++) {
-	  cy.get('button[onclick="addElement()"]').click();
+	  cy.get(this.addElementsBtn).click();
 	}
   }
 
   removeElements(count) {
 	for (let i = 0; i < count; i++) {
-	  cy.get('.added-manually').first().click();
+	  cy.get(this.deleteBtn).first().click();
 	}
   }
 
   getDeleteButtons() {
-	return cy.get('.added-manually');
+	return cy.get(this.deleteBtn);
   }
 }
 
