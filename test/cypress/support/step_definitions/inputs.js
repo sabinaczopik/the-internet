@@ -23,5 +23,5 @@ Then('I see the input with value {string}', (text) => {
 }); 
 
 Then('I see the input field', () => {
-    InputsPage.isInputField();
+    InputsPage.isInputFieldVisible();
 })

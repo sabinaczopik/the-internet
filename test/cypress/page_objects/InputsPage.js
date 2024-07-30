@@ -24,7 +24,7 @@ class InputsPage {
         cy.get(this.inputField).should('have.value', text);
     }
 
-    isInputField() {
+    isInputFieldVisible() {
         cy.get(this.inputField).should('be.visible');
     }
 }
